@@ -1,11 +1,11 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const { randomBytes } = require('crypto')
+import express from 'express'
+import json from 'body-parser'
+import { randomBytes } from 'crypto'
 
 const app = express()
-app.use(bodyParser.json())
-const posts = {}
+app.use(json())
 
+const posts = {}
 
 app.get('/posts', (req, res) => {
     res.send(posts)
