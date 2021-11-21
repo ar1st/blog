@@ -1,9 +1,11 @@
 import express from 'express'
 import json from 'body-parser'
+import cors from 'cors'
 import { randomBytes } from 'crypto'
 
 const app = express()
 app.use(json())
+app.use(cors())
 
 const posts = {}
 
