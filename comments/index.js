@@ -1,10 +1,10 @@
 import express from 'express'
-import json from 'body-parser'
 import {randomBytes} from 'crypto'
 import cors from 'cors'
 
 const app = express()
-app.use(json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cors())
 
 

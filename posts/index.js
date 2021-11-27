@@ -1,10 +1,11 @@
 import express from 'express'
-import json from 'body-parser'
 import cors from 'cors'
 import { randomBytes } from 'crypto'
+import axios from 'axios'
 
 const app = express()
-app.use(json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cors())
 
 const posts = {}

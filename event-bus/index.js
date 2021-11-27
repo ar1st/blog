@@ -1,9 +1,9 @@
 import express from 'express'
-import json from 'body-parser'
 import axios from 'axios'
 
 const app = express()
-app.use(json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.post('/events', (req, res) => {
     const event = req.body
